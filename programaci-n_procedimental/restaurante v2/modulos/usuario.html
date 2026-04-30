@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Registro de Usuario</h1>
+      <h2 class="subtitle has-text-centered">Ingresa los datos de registro</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box">
+            <form>
+              <div class="field">
+            <label class="label">Nombre</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Nombre">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Apellido</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Apellido">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Tipo de documento</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Cédula de Ciudadanía (CC)</option>
+                  <option>Tarjeta de Identidad (TI)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Número de documento</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Documento">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+
+          <div class="field">
+            <label class="label">Teléfono</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Teléfono">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Correo electrónico</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Correo">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+
+          <div class="field">
+            <div class="control">
+              <label class="label">Género</label>
+              <label class="radio">
+                <input type="radio" name="genero">
+                Femenino
+              </label>
+              <label class="radio">
+                <input type="radio" name="genero">
+                Masculino
+              </label>
+              <label class="radio">
+                <input type="radio" name="genero">
+                Otro
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Cargo</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Usuario</option>
+                  <option>Administrador</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Fecha de nacimiento</label>
+            <div class="control">
+              <input class="input" type="date" placeholder="Fecha">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Contraseña</label>
+            <div class="control">
+              <input class="input" type="password" placeholder="Contraseña">
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-success is-dark is-rounded">Enviar</button>
+            </div>
+            <div class="control">
+              <button class="button is-primary is-dark is-rounded">Cancelar</button>
+            </div>
+          </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
