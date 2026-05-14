@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <title>Pedidos</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Más opciones </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="../index.html">Inicio</a>
+              <a class="navbar-item" href="contabilidad.html">Contabilidad</a>
+              <a class="navbar-item" href="inventario.html">Inventario</a>
+              <a class="navbar-item" href="menu.html">Menú</a>
+              <a class="navbar-item" href="pedidos.html">Pedidos</a>
+              <a class="navbar-item" href="usuario.html">Usuario</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">Pedidos</h1>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="box">
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Producto"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Usuario"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Dirección"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Teléfono"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="number"
+                      placeholder="Cantidad"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Método de pago</label>
+                  <div class="control">
+                    <div class="select">
+                      <select>
+                        <option>Efectivo</option>
+                        <option>Tarjeta de Crédito</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Datos de Tarjeta</label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Número de Tarjeta"
+                    />
+                  </div>
+                </div>
+
+                <div class="field is-grouped">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Vencimiento"
+                    />
+                  </div>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="CVV" />
+                  </div>
+                </div>
+
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button class="button is-success is-dark is-rounded">
+                      Enviar
+                    </button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-primary is-dark is-rounded">
+                      Cancelar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

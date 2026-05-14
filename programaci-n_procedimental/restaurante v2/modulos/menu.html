@@ -1,12 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
     <title>Menú</title>
-</head>
-<body>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Más opciones </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="../index.html">Inicio</a>
+              <a class="navbar-item" href="contabilidad.html">Contabilidad</a>
+              <a class="navbar-item" href="inventario.html">Inventario</a>
+              <a class="navbar-item" href="menu.html">Menú</a>
+              <a class="navbar-item" href="pedidos.html">Pedidos</a>
+              <a class="navbar-item" href="usuario.html">Usuario</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="columns">
       <div class="column">
         <div class="card">
@@ -116,5 +137,60 @@
           </div>
         </div>
       </div>
-</body>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-128x128">
+                  <img
+                    src="https://mre-site-makro-colombia-test-webapp-slot.azurewebsites.net/imagesProducts/medias/158126_1_226.webp"
+                    alt="Butifarra del bisabuelo"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Butifarra del bisabuelo</p>
+                <p class="subtitle is-6">
+                  ¿Antojo de una buena butifarra? 🤔 La Butifarra del Bisabuelo
+                  te ofrece la textura y el sabor real del hogar. Especias
+                  naturales, carne de primera y un ahumado natural que marca la
+                  diferencia 👴🥩
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-128x128">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkQLRuro_zsptDBtZlS6ev5uL6YCVBKQFDng&s"
+                    alt="Piña del inge"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Piña del inge</p>
+                <p class="subtitle is-6">
+                  Olvídate de los ingenieros que solo dan órdenes ¡Esta Piña del
+                  Inge sí trabaja duro! Súper jugosa, dulce al punto y para
+                  quitarte la sed 💦 ¡Menos charla en la obra y más sabor en la
+                  mesa! 🍍🤤
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
