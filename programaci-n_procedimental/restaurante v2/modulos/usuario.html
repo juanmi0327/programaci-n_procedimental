@@ -38,16 +38,14 @@
             <div class="box">
               <form>
                 <div class="field">
-                  <label class="label">Nombre</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Nombre" />
+                    <input class="input" id="nombre_usuario" type="text" placeholder="Nombre" />
                   </div>
                 </div>
 
                 <div class="field">
-                  <label class="label">Apellido</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Apellido" />
+                    <input class="input" id="apellido" type="text" placeholder="Apellido" />
                   </div>
                 </div>
 
@@ -55,7 +53,7 @@
                   <label class="label">Tipo de documento</label>
                   <div class="control">
                     <div class="select">
-                      <select>
+                      <select id="documento">
                         <option>Cédula de Ciudadanía (CC)</option>
                         <option>Tarjeta de Identidad (TI)</option>
                       </select>
@@ -64,23 +62,20 @@
                 </div>
 
                 <div class="field">
-                  <label class="label">Número de documento</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Documento" />
+                    <input class="input" id="num_doc" type="text" placeholder="Documento" />
                   </div>
                 </div>
 
                 <div class="field">
-                  <label class="label">Teléfono</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Teléfono" />
+                    <input class="input" id="telefono" type="text" placeholder="Teléfono" />
                   </div>
                 </div>
 
                 <div class="field">
-                  <label class="label">Correo electrónico</label>
                   <div class="control">
-                    <input class="input" type="email" placeholder="Correo" />
+                    <input class="input" id="correo" type="email" placeholder="Correo" />
                   </div>
                 </div>
 
@@ -88,15 +83,15 @@
                   <div class="control">
                     <label class="label">Género</label>
                     <label class="radio">
-                      <input type="radio" name="genero" />
+                      <input type="radio" name="genero" id="gen_fem" />
                       Femenino
                     </label>
                     <label class="radio">
-                      <input type="radio" name="genero" />
+                      <input type="radio" name="genero" id="gen_mas" />
                       Masculino
                     </label>
                     <label class="radio">
-                      <input type="radio" name="genero" />
+                      <input type="radio" name="genero" id="gen_otro" />
                       Otro
                     </label>
                   </div>
@@ -106,7 +101,7 @@
                   <label class="label">Cargo</label>
                   <div class="control">
                     <div class="select">
-                      <select>
+                      <select id="cargo">
                         <option>Usuario</option>
                         <option>Administrador</option>
                       </select>
@@ -117,16 +112,16 @@
                 <div class="field">
                   <label class="label">Fecha de nacimiento</label>
                   <div class="control">
-                    <input class="input" type="date" placeholder="Fecha" />
+                    <input class="input" type="date" id="fecha_nacimi" placeholder="Fecha" />
                   </div>
                 </div>
 
                 <div class="field">
-                  <label class="label">Contraseña</label>
                   <div class="control">
                     <input
                       class="input"
                       type="password"
+                      id="contrasena"
                       placeholder="Contraseña"
                     />
                   </div>
@@ -150,5 +145,6 @@
         </div>
       </div>
     </section>
+    <script src="../js/usuario.js"></script>
   </body>
 </html>
