@@ -27,13 +27,15 @@ function ValidarDatos(){
         console.log('Los datos son incorrectos')
     }
 
+    if(telefono.length() >= 10){
+        console.log('Los datos son incorrectos')
+    }
+
     if(correo != /[a-zA-Z-@]/){
         console.log('Los datos son incorrectos')
     }
 
-    if(contraseña != /[a-zA-Z]/)
-
-    if(telefono.length() >= 10){
+    if(contraseña != /[a-zA-Z]/){
         console.log('Los datos son incorrectos')
     }
 }
