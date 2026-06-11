@@ -11,6 +11,7 @@ let cargo = document.getElementById("cargo").value;
 let fecha_nacimi = document.getElementById("fecha_nacimi").value;
 let contrasena = document.getElementById("contrasena").value;
 
+
 function ValidarDatos(){
     if(nombre_usuario == '' || apellido == '' || num_doc == '' || telefono == '' || correo == '' || contrasena == '')
         console.log("Los campos están vacíos")
@@ -23,11 +24,11 @@ function ValidarDatos(){
         console.log('Los datos son incorrectos')
     }
 
-    if(num_doc.length >= 10){
+    if(num_doc.length() >= 10 || num_doc != /[1-9]/){
         console.log('Los datos son incorrectos')
     }
 
-    if(telefono.length() >= 10){
+    if(telefono.length() >= 10 || num_doc != /[1-9]/){
         console.log('Los datos son incorrectos')
     }
 
