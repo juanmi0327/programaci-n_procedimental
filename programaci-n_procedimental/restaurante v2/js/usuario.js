@@ -23,11 +23,11 @@ function ValidarDatos(){
         console.log('Los datos son incorrectos')
     }
 
-    if(num_doc.length >= 10){
+    if(num_doc.length >= 10 && num_doc != /[1-9]/){
         console.log('Los datos son incorrectos')
     }
 
-    if(telefono.length() >= 10){
+    if(telefono.length() >= 10 && telefono != /[1-9]/){
         console.log('Los datos son incorrectos')
     }
 
