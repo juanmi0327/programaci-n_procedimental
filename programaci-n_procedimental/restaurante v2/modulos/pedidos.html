@@ -35,7 +35,7 @@
         <div class="columns is-centered">
           <div class="column is-half">
             <div class="box">
-              <form>
+              <form id="pedidosForm">
                 <div class="field">
                   <div class="control">
                     <input
@@ -43,7 +43,6 @@
                       type="text"
                       id="producto"
                       placeholder="Producto"
-                      required
                     />
                   </div>
                 </div>
@@ -55,7 +54,6 @@
                       type="text"
                       id="usuario"
                       placeholder="Usuario"
-                      required
                     />
                   </div>
                 </div>
@@ -67,7 +65,6 @@
                       type="text"
                       id="direccion"
                       placeholder="Dirección"
-                      required
                     />
                   </div>
                 </div>
@@ -79,7 +76,6 @@
                       type="text"
                       id="telefono"
                       placeholder="Teléfono"
-                      required
                     />
                   </div>
                 </div>
@@ -88,10 +84,9 @@
                   <div class="control">
                     <input
                       class="input"
-                      type="number"
+                      type="text"
                       id="cantidad"
                       placeholder="Cantidad"
-                      required
                     />
                   </div>
                 </div>
@@ -152,6 +147,7 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/pedidos.js"></script>
   </body>
 </html>

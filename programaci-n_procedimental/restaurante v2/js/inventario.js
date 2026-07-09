@@ -1,26 +1,61 @@
-let codigo_produc = document.getElementById("codigo_producto").value;
-let nombre_produc = document.getElementById("nombre_producto").value;
-let cantidad = document.getElementById("cantidad").value;
-let marca_produc = document.getElementById("marca_producto").value;
+function ValidarVentas(event) {
+    if (event) event.preventDefault();
 
-function ValidarVentas(){
-    if(codigo_produc == '' || nombre_produc == '' || cantidad == '' || marca_produc == '')
-        console.log("Los campos están vacíos")
-    else{
-    if(codigo_produc != /[1-9]/){
-        console.log('Los datos son incorrectos')
+    let codigo_produc = document.getElementById("codigo_producto").value;
+    let nombre_produc = document.getElementById("nombre_producto").value;
+    let cantidad = document.getElementById("cantidad").value;
+    let marca_produc = document.getElementById("marca_producto").value;
+
+    if (codigo_produc === "" || nombre_produc === "" || cantidad === "" || marca_produc === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "No se encontraron datos. Por favor complete todos los datos.",
+        });
+        return;
     }
 
-    if(nombre_produc != /[a-zA-Z]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[0-9]+$/(codigo_produc)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El código del producto debe contener números.",
+        });
+        return;
     }
 
-    if(cantidad != /[1-9]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[a-zA-Z][0-9]+$/(nombre_produc)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El nombre del producto contiene caracteres inválidos.",
+        });
+        return;
     }
 
-    if(marca_produc != /[a-zA-Z]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[0-9]+$/(cantidad)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "La cantidad debe contener números.",
+        });
+        return;
     }
+
+    if (!/^[a-zA-Z][0-9]+$/(marca_produc)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "La marca del producto contiene caracteres inválidos.",
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: "success",
+        title: "¡Éxito!",
+        text: "El producto se ha agregado correctamente.",
+    });
 }
-}
+
+document.getElementById("inventarioForm").addEventListener("submit", ValidarVentas);
