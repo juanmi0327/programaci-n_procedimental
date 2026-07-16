@@ -1,5 +1,4 @@
-function ValidarVentas(event) {
-    if (event) event.preventDefault();
+function ValidarVentas() {
 
     let ventas = document.getElementById("ventas").value;
     let fecha = document.getElementById("fecha").value;
@@ -17,7 +16,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(ventas)) {
+    if (!/^[0-9]+$/.test(ventas)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -26,7 +25,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(ingresos)) {
+    if (!/^[0-9]+$/.test(ingresos)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -35,7 +34,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(egresos)) {
+    if (!/^[0-9]+$/.test(egresos)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -44,7 +43,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z][0-9]+$/(concepto)) {
+    if (!/^[a-zA-Z][0-9]+$/.test(concepto)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -53,7 +52,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(valor)) {
+    if (!/^[0-9]+$/.test(valor)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -64,9 +63,9 @@ function ValidarVentas(event) {
 
     Swal.fire({
         icon: "success",
-        title: "¡Éxito!",
+        title: "Éxito",
         text: "El registro se ha agregado correctamente.",
     });
 }
 
-document.getElementById("contabilidadForm").addEventListener("submit", ValidarVentas);
+document.getElementById("enviar").onclick = ValidarVentas;

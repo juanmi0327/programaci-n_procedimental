@@ -1,5 +1,4 @@
-function ValidarVentas(event) {
-    if (event) event.preventDefault();
+function ValidarPedido() {
 
     let producto = document.getElementById("producto").value;
     let usuario = document.getElementById("usuario").value;
@@ -21,7 +20,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z]+$/(producto)) {
+    if (!/^[a-zA-Z]+$/.test(producto)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -30,7 +29,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z]+$/(usuario)) {
+    if (!/^[a-zA-Z]+$/.test(usuario)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -39,7 +38,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z0-9\s-@.]+$/(direccion)) {
+    if (!/^[a-zA-Z0-9-@.]+$/.test(direccion)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -48,7 +47,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(telefono) || telefono.length < 10) {
+    if (!/^[0-9]+$/.test(telefono) || telefono.length < 10) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -57,7 +56,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(cantidad)) {
+    if (!/^[0-9]+$/.test(cantidad)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -67,7 +66,7 @@ function ValidarVentas(event) {
     }
 
     if (requiereTarjeta) {
-        if (!/^[0-9]+$/(num_tarjeta) || num_tarjeta.length < 15 || num_tarjeta.length > 16) {
+        if (!/^[0-9]+$/.test(num_tarjeta) || num_tarjeta.length < 15 || num_tarjeta.length > 16) {
             Swal.fire({
                 icon: "error",
                 title: "Algo salió mal",
@@ -88,9 +87,9 @@ function ValidarVentas(event) {
 
     Swal.fire({
         icon: "success",
-        title: "¡Éxito!",
+        title: "Éxito",
         text: "El pedido se ha realizado correctamente.",
     });
 }
 
-document.getElementById("pedidosForm").addEventListener("submit", ValidarVentas);
+document.getElementById("enviar").onclick = ValidarPedido;

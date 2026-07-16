@@ -1,5 +1,4 @@
-function ValidarVentas(event) {
-    if (event) event.preventDefault();
+    function ValidarUsuario() {
 
     let nombre_usuario = document.getElementById("nombre_usuario").value;
     let apellido = document.getElementById("apellido").value;
@@ -10,11 +9,9 @@ function ValidarVentas(event) {
     let cargo = document.getElementById("cargo").value;
     let fecha_nacimi = document.getElementById("fecha_nacimi").value;
     let contrasena = document.getElementById("contrasena").value;
-
     let generoEl = document.querySelector('input[name="genero"]:checked');
-    let genero = generoEl ? generoEl.id : "";
 
-    if (nombre_usuario === "" || apellido === "" || num_doc === "" || telefono === "" || correo === "" || contrasena === "" || fecha_nacimi === "" || !genero) {
+    if (nombre_usuario === "" || apellido === "" || num_doc === "" || telefono === "" || correo === "" || contrasena === "" || fecha_nacimi === "" || !generoEl) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -23,7 +20,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z]+$/(nombre_usuario)) {
+    if (!/^[a-zA-Z]+$/.test(nombre_usuario)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -32,7 +29,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z]+$/(apellido)) {
+    if (!/^[a-zA-Z]+$/.test(apellido)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -41,7 +38,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(num_doc)) {
+    if (!/^[0-9]+$/.test(num_doc)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -50,7 +47,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[0-9]+$/(telefono) || telefono.length < 10) {
+    if (!/^[0-9]+$/.test(telefono) || telefono.length < 10) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -59,7 +56,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z0-9-@.]+$/(correo)) {
+    if (!/^[a-zA-Z0-9-@.]$/.test(correo)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -68,7 +65,7 @@ function ValidarVentas(event) {
         return;
     }
 
-    if (!/^[a-zA-Z][0-9]+$/(contrasena)) {
+    if (!/^[a-zA-Z0-9]+$/.test(contrasena)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
@@ -79,9 +76,10 @@ function ValidarVentas(event) {
 
     Swal.fire({
         icon: "success",
-        title: "¡Éxito!",
+        title: "Éxito",
         text: "El usuario se ha registrado correctamente.",
     });
+    return;
 }
 
-document.getElementById("usuarioForm").addEventListener("submit", ValidarVentas);
+document.getElementById("enviar").onclick = ValidarUsuario;
