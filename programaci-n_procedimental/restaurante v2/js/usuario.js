@@ -1,43 +1,85 @@
-let nombre_usuario = document.getElementById("nombre_usuario").value;
-let apellido = document.getElementById("apellido").value;
-let documento = document.getElementById("documento").value;
-let num_doc = document.getElementById("num_doc").value;
-let telefono = document.getElementById("telefono").value;
-let correo = document.getElementById("correo").value;
-let gen_fem = document.querySelector('input[name="gen_fem"]:checked').value;
-let gen_mas = document.querySelector('input[name="gen_mas"]:checked').value;
-let gen_otro = document.querySelector('input[name="gen_otro"]:checked').value;
-let cargo = document.getElementById("cargo").value;
-let fecha_nacimi = document.getElementById("fecha_nacimi").value;
-let contrasena = document.getElementById("contrasena").value;
+    function ValidarUsuario() {
 
+    let nombre_usuario = document.getElementById("nombre_usuario").value;
+    let apellido = document.getElementById("apellido").value;
+    let documento = document.getElementById("documento").value;
+    let num_doc = document.getElementById("num_doc").value;
+    let telefono = document.getElementById("telefono").value;
+    let correo = document.getElementById("correo").value;
+    let cargo = document.getElementById("cargo").value;
+    let fecha_nacimi = document.getElementById("fecha_nacimi").value;
+    let contrasena = document.getElementById("contrasena").value;
+    let generoEl = document.querySelector('input[name="genero"]:checked');
 
-function ValidarDatos(){
-    if(nombre_usuario == '' || apellido == '' || num_doc == '' || telefono == '' || correo == '' || contrasena == '')
-        console.log("Los campos están vacíos")
-    else{
-    if(nombre_usuario != /[a-zA-Z]/){
-        console.log('Los datos son incorrectos')
+    if (nombre_usuario === "" || apellido === "" || num_doc === "" || telefono === "" || correo === "" || contrasena === "" || fecha_nacimi === "" || !generoEl) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "Los campos están vacíos. Por favor complete todos los datos.",
+        });
+        return;
     }
 
-    if(apellido != /[a-zA-Z]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[a-zA-Z]+$/.test(nombre_usuario)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El nombre debe contener letras.",
+        });
+        return;
     }
 
-    if(num_doc.length() >= 10 || num_doc != /[1-9]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[a-zA-Z]+$/.test(apellido)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El apellido debe contener letras.",
+        });
+        return;
     }
 
-    if(telefono.length() >= 10 || num_doc != /[1-9]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[0-9]+$/.test(num_doc)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El número de documento debe contener números.",
+        });
+        return;
     }
 
-    if(correo != /[a-zA-Z-@]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[0-9]+$/.test(telefono) || telefono.length < 10) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El teléfono debe contener números y tener al menos 10 dígitos.",
+        });
+        return;
     }
 
-    if(contraseña != /[a-zA-Z]/){
-        console.log('Los datos son incorrectos')
+    if (!/^[a-zA-Z0-9-@.]$/.test(correo)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "El correo electrónico no es válido.",
+        });
+        return;
     }
+
+    if (!/^[a-zA-Z0-9]+$/.test(contrasena)) {
+        Swal.fire({
+            icon: "error",
+            title: "Algo salió mal",
+            text: "La contraseña contiene caracteres inválidos.",
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: "success",
+        title: "Éxito",
+        text: "El usuario se ha registrado correctamente.",
+    });
+    return;
 }
-}
+
+document.getElementById("enviar").onclick = ValidarUsuario;

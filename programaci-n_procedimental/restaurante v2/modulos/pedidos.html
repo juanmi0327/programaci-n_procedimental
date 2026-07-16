@@ -35,7 +35,6 @@
         <div class="columns is-centered">
           <div class="column is-half">
             <div class="box">
-              <form>
                 <div class="field">
                   <div class="control">
                     <input
@@ -43,7 +42,6 @@
                       type="text"
                       id="producto"
                       placeholder="Producto"
-                      required
                     />
                   </div>
                 </div>
@@ -55,7 +53,6 @@
                       type="text"
                       id="usuario"
                       placeholder="Usuario"
-                      required
                     />
                   </div>
                 </div>
@@ -67,7 +64,6 @@
                       type="text"
                       id="direccion"
                       placeholder="Dirección"
-                      required
                     />
                   </div>
                 </div>
@@ -79,7 +75,6 @@
                       type="text"
                       id="telefono"
                       placeholder="Teléfono"
-                      required
                     />
                   </div>
                 </div>
@@ -88,10 +83,9 @@
                   <div class="control">
                     <input
                       class="input"
-                      type="number"
+                      type="text"
                       id="cantidad"
                       placeholder="Cantidad"
-                      required
                     />
                   </div>
                 </div>
@@ -124,7 +118,7 @@
                   <div class="control">
                     <input
                       class="input"
-                      type="text"
+                      type="date"
                       id="vencimiento"
                       placeholder="Vencimiento"
                     />
@@ -136,22 +130,22 @@
 
                 <div class="field is-grouped">
                   <div class="control">
-                    <button class="button is-success is-dark is-rounded">
+                    <button class="button is-success is-dark is-rounded" id="enviar">
                       Enviar
                     </button>
                   </div>
                   <div class="control">
-                    <button class="button is-primary is-dark is-rounded">
+                    <button class="button is-primary is-dark is-rounded" id="cancelar">
                       Cancelar
                     </button>
                   </div>
                 </div>
-              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/pedidos.js"></script>
   </body>
 </html>

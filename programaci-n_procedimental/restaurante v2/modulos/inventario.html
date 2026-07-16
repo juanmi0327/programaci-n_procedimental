@@ -41,7 +41,6 @@
                   </div>
                 </div>
 
-                <form id="inventarioForm" class="section">
                   <div class="field">
                     <div class="control">
                       <input
@@ -50,7 +49,6 @@
                         id="codigo_producto"
                         name="codigo_producto"
                         placeholder="Código del producto"
-                        required
                       />
                     </div>
                   </div>
@@ -63,7 +61,6 @@
                         id="nombre_producto"
                         name="nombre_producto"
                         placeholder="Nombre del producto"
-                        required
                       />
                     </div>
                   </div>
@@ -72,11 +69,10 @@
                     <div class="control">
                       <input
                         class="input"
-                        type="number"
+                        type="text"
                         id="cantidad"
                         name="cantidad"
-                        placeholder="cantidad"
-                        required
+                        placeholder="Cantidad"
                       />
                     </div>
                   </div>
@@ -89,7 +85,6 @@
                         id="marca_producto"
                         name="marca_producto"
                         placeholder="Marca del producto"
-                        required
                       />
                     </div>
                   </div>
@@ -99,6 +94,7 @@
                       <button
                         type="submit"
                         class="button is-success is-dark is-rounded"
+                        id="guardar"
                       >
                         Guardar
                       </button>
@@ -107,18 +103,19 @@
                       <button
                         type="reset"
                         class="button is-primary is-dark is-rounded"
+                        id="cancelar"
                       >
                         Cancelar
                       </button>
                     </div>
                   </div>
-                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/inventario.js"></script>
   </body>
 </html>
