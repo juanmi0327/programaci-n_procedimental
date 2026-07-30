@@ -21,7 +21,7 @@ function ValidarInventario() {
             return;
         }
 
-        if (!/^[a-zA-Z][0-9]+$/.test(nombre_produc)) {
+        if (!/^[a-zA-Z0-9]+$/.test(nombre_produc)) {
             Swal.fire({
                 icon: "error",
                 title: "Algo salió mal",
@@ -39,7 +39,7 @@ function ValidarInventario() {
             return;
         }
 
-        if (!/^[a-zA-Z][0-9]+$/.test(marca_produc)) {
+        if (!/^[a-zA-Z0-9]+$/.test(marca_produc)) {
             Swal.fire({
                 icon: "error",
                 title: "Algo salió mal",

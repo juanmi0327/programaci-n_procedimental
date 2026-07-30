@@ -43,7 +43,7 @@ function ValidarVentas() {
         return;
     }
 
-    if (!/^[a-zA-Z][0-9]+$/.test(concepto)) {
+    if (!/^[a-zA-Z0-9]+$/.test(concepto)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
