@@ -56,7 +56,7 @@
         return;
     }
 
-    if (!/^[a-zA-Z0-9-@.]$/.test(correo)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
         Swal.fire({
             icon: "error",
             title: "Algo salió mal",
